@@ -13,8 +13,8 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await fetch('https://netzwelt-devtest.azurewebsites.net/Account/SignIn/', {
-        method: 'POST',
+      const response = await fetch('http://localhost:8000/Account/SignIn', {
+        method: 'post',
         cors: 'cors',
         headers: {
           'Content-Type':  "application/json",
@@ -26,7 +26,7 @@ const Login = () => {
         localStorage.setItem('token', true); //stores a true value in the local storage
         return navigate('/');
       }
-      throw new Error('Login failed');
+      throw new Error(response.message);
     } catch (err) {
       setError(`${err}`);
     }
@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <div className='bg-slate-700 p-10 rounded-lg'>
-      {error && <p className='bg-red-700 text-white rounded-sm p-2 mb-5'>{error}</p>}
+      {error && <p className='bg-red-700 text-white text-sm rounded-sm p-2 mb-5'>{error}</p>}
       <form className='flex flex-col gap-2' onSubmit={handleSubmit}>
         <label htmlFor='username'>Username:</label>
         <input
