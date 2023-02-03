@@ -12,9 +12,11 @@ const DisplayTeritories = () => {
   };
 
   return (
-    <div>
+    <div className='flex flex-col gap-2'>
+      <section>
       <h2>Territories</h2>
       <p>Here are the list of territories</p>
+      </section>
       <ul>
         <li>{Data.map(mainTeritory)}</li>
       </ul>
