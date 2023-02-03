@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { TerritoriesContext } from '../../pages/HomePage';
 
 const SubMainTerritory = ({ name }) => {
-  const Data = useContext(TerritoriesContext);
+  const Data = useContext(TerritoriesContext); //gets the value from useContext hook
 
   const miniTerritory = (e) => {
       if (e.parent === '101' && name === 'Manila') {

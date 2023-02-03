@@ -23,7 +23,7 @@ const Login = () => {
       }).then((res) => res.json());
 
       if (response.message !== 'Invalid username or password.') {
-        localStorage.setItem('token', true);
+        localStorage.setItem('token', true); //stores a true value in the local storage
         return navigate('/');
       }
       throw new Error('Login failed');

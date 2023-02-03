@@ -5,7 +5,7 @@ import { TerritoriesContext } from '../../pages/HomePage';
 import SubMainTerritory from '../SubMainTerritory';
 
 const MainTerritory = ({ name }) => {
-  const Data = useContext(TerritoriesContext);
+  const Data = useContext(TerritoriesContext); //gets the value from useContext hook
 
   const subMainTerritory = (e) => {
     if (e.parent === '1' && name === 'Metro Manila') {

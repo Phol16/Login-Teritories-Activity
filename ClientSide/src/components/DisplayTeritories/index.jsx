@@ -3,7 +3,7 @@ import { TerritoriesContext } from '../../pages/HomePage';
 import MainTerritory from '../MainTerritory';
 
 const DisplayTeritories = () => {
-  const Data = useContext(TerritoriesContext)
+  const Data = useContext(TerritoriesContext) //gets the value from useContext hook
 
   const mainTeritory = (e) => {
     if(e.parent === null){

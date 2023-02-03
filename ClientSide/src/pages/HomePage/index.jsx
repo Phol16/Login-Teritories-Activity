@@ -9,7 +9,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
+      try { // fetch the data from given link
         const response = await fetch('https://netzwelt-devtest.azurewebsites.net/Territories/All').then((res) => res.json());
         setData(response.data);
       } catch (err) {
@@ -21,7 +21,7 @@ const HomePage = () => {
 
   return (
     <div className='bg-gray-500 w-screen h-screen text-white flex justify-center overflow-auto py-10 '>
-      <TerritoriesContext.Provider value={data}>
+      <TerritoriesContext.Provider value={data}> {/* wraps DisplayTeritories in useContext hook to avoid prop drilling */}
         <DisplayTeritories />
       </TerritoriesContext.Provider>
     </div>

@@ -12,12 +12,12 @@ const App = () => {
       <Route
         path='/'
         element={
-          <Protected>
+          <Protected> {/*Protected component wraps Homepage, if not authenticated it will redirect back to loginpage */}
             <HomePage />
           </Protected>
         }
       />
-      <Route path='/*' element={<ThePageNotFound />} />
+      <Route path='/*' element={<ThePageNotFound />} />  {/* will output ThePageNotFound component*/}
     </Routes>
   );
 };
