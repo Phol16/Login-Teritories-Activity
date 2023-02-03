@@ -1,28 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { username, password };
-    setError('')
-    navigate('/')
-    // try {
-    //   const response = await fetch('https://netzwelt-devtest.azurewebsites.net/Account/SignIn', {
-    //     method: 'POST',
-    //     cors: 'cors',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //   }).then((res) => res.json());
-    // } catch (err) {
-    //   setError(`${err}`);
-    // }
+    setError('');
+
+    try {
+      const response = await fetch('https://netzwelt-devtest.azurewebsites.net/Account/SignIn', {
+        method: 'POST',
+        cors: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      }).then((res) => res.json());
+
+      if (response.message !== 'Invalid username or password.') {
+        localStorage.setItem('token', true);
+        return navigate('/');
+      }
+      throw new Error('Login failed');
+    } catch (err) {
+      setError(`${err}`);
+    }
   };
 
   return (
@@ -36,7 +43,7 @@ const Login = () => {
           required
           className='bg-white text-black'
           onChange={(e) => {
-            setError('')
+            setError('');
             setUsername(e.target.value);
           }}
         />
@@ -47,7 +54,7 @@ const Login = () => {
           required
           className='bg-white text-black'
           onChange={(e) => {
-            setError('')
+            setError('');
             setPassword(e.target.value);
           }}
         />
