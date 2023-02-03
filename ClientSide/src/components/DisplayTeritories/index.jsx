@@ -1,27 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { TerritoriesContext } from '../../pages/HomePage';
+import MainTerritory from '../MainTerritory';
 
 const DisplayTeritories = () => {
-  const [teritories, setTeritories] = useState([]);
+  const Data = useContext(TerritoriesContext)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('https://netzwelt-devtest.azurewebsites.net/Territories/All').then((res) => res.json());
-        setTeritories(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+  const mainTeritory = (e) => {
+    if(e.parent === null){
+     return <MainTerritory name={e.name} key={e.id} />
+    }
+  };
 
   return (
     <div>
       <h2>Territories</h2>
       <p>Here are the list of territories</p>
       <ul>
-        <li>
-        </li>
+        <li>{Data.map(mainTeritory)}</li>
       </ul>
     </div>
   );
