@@ -1,11 +1,16 @@
-import { createBrowserRouter } from "react-router-dom";
-import LoginPage from "../pages/LoginPage";
+import { createBrowserRouter } from 'react-router-dom';
+import HomePage from '../pages/HomePage';
+import LoginPage from '../pages/LoginPage';
 
 const mainRouter = createBrowserRouter([
-{
-  path:'/account/login',
-  element: <LoginPage/>
-}
+  {
+    path: '/',
+    element:<HomePage/>
+  },
+  {
+    path: '/account/login',
+    element: <LoginPage />,
+  },
 ]);
 
 export default mainRouter;
