@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/LoginPage';
-import PageNotFound from '../pages/pageNotFound';
 import Protected from './Protected';
+import ThePageNotFound from '../pages/pageNotFound';
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
           </Protected>
         }
       />
-      <Route path='/*' element={<PageNotFound />} />
+      <Route path='/*' element={<ThePageNotFound />} />
     </Routes>
   );
 };

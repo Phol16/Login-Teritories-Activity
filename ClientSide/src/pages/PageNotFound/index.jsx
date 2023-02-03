@@ -1,7 +1,7 @@
 import React from 'react';
 import DisplayPageNotFound from '../../components/DisplayPageNotFound';
 
-const PageNotFound = () => {
+const ThePageNotFound = () => {
   return (
     <div>
       <DisplayPageNotFound/>
@@ -9,4 +9,4 @@ const PageNotFound = () => {
   );
 };
 
-export default PageNotFound;
+export default ThePageNotFound;
