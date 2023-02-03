@@ -22,7 +22,7 @@ const MainTerritory = ({ name }) => {
   return (
     <div className='flex flex-col gap-2 mb-2'>
       <section className='flex jsutify-center items-center gap-2'>
-        <button className='text-black px-1 py-0 rounded-full text-xs'>
+        <button className='bg-transparent border-none text-white px-1 py-0 rounded-full text-xs'>
           <FontAwesomeIcon icon={faChevronDown} />
         </button>
         <p className='text-white'>{name}</p>

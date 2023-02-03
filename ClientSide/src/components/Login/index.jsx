@@ -13,11 +13,11 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await fetch('https://netzwelt-devtest.azurewebsites.net/Account/SignIn', {
+      const response = await fetch('http://localhost:8000/Account/SignIn/', {
         method: 'POST',
         cors: 'cors',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type':  "application/json",
         },
         body: JSON.stringify(data),
       }).then((res) => res.json());
