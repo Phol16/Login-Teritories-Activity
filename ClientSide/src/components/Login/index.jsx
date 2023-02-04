@@ -9,10 +9,11 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = { username, password };
+    const data = { username, password }; // store the username and password value in the data variable
     setError('');
 
     try {
+      //sends username and password to the server to check credentials
       const response = await fetch('http://localhost:3000/Account/SignIn', {
         method: 'post',
         cors: 'cors',
@@ -24,17 +25,17 @@ const Login = () => {
 
       if (response.message !== 'Invalid username or password.') {
         localStorage.setItem('token', true); //stores a true value in the local storage
-        return navigate('/');
+        return navigate('/'); // redirect to the homepage
       }
-      throw new Error(response.message);
+      throw new Error(response.message); // will throw the error message from the server response
     } catch (err) {
-      setError(`${err}`);
+      setError(`${err}`); // will set the value for the error state
     }
   };
 
   return (
     <div className='bg-slate-700 p-10 rounded-lg'>
-      {error && <p className='bg-red-700 text-white text-sm rounded-sm p-2 mb-5'>{error}</p>}
+      {error && <p className='bg-red-700 text-white text-sm rounded-sm p-2 mb-5'>{error}</p>} {/*display the error if the error state has value */}
       <form className='flex flex-col gap-2' onSubmit={handleSubmit}>
         <label htmlFor='username'>Username:</label>
         <input

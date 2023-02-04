@@ -6,9 +6,10 @@ import SubMainTerritory from '../SubMainTerritory';
 
 const MainTerritory = ({ name }) => {
   const Data = useContext(TerritoriesContext); //gets the value from useContext hook
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); //state for dropdown
 
   const subMainTerritory = (e) => {
+    //conditional statement if the current territory name and the child parentId is true it will display the children
     if (e.parent === '1' && name === 'Metro Manila') {
       return <SubMainTerritory name={e.name} key={e.id} />;
     }

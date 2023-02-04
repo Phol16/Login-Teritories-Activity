@@ -8,6 +8,7 @@ const SubMainTerritory = ({ name }) => {
   const [open, setOpen] = useState(false);
 
   const miniTerritory = (e) => {
+    //conditional statement if the current territory name and the child parentId is true it will display the children
     if (e.parent === '101' && name === 'Manila') {
       return (
         <p key={e.id} className='text-slate-800'>

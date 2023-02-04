@@ -23,7 +23,7 @@ const DisplayTeritories = () => {
           <li>{Data.map(mainTeritory)}</li>
         </ul>
       </div>
-      <Logout />
+      <Logout /> {/*component to logout*/}
     </>
   );
 };

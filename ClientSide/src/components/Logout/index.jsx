@@ -5,8 +5,8 @@ const Logout = () => {
   const navigate = useNavigate();
 
   const logout = () => {
-    navigate('/Account/Login');
-    localStorage.removeItem('token');
+    navigate('/Account/Login'); // redirect to the homepage once logout is clicked
+    localStorage.removeItem('token'); // will remove the value of the token in the localstorage
   };
 
   return (
