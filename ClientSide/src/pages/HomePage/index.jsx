@@ -10,7 +10,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try { // fetch the data from given link
-        const response = await fetch('https://netzwelt-devtest.azurewebsites.net/Territories/All').then((res) => res.json());
+        const response = await fetch('http://localhost:3000/Territories/All').then((res) => res.json());
         setData(response.data);
       } catch (err) {
         console.log(err);

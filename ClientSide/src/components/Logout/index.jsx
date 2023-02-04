@@ -11,7 +11,7 @@ const Logout = () => {
 
   return (
     <div className='flex justify-end fixed bottom-3 ml-56 md:ml-80 z-20'>
-      <button className='text-black p-1 shadow ' onClick={logout}>
+      <button className='text-black p-1 shadow bg-white' onClick={logout}>
         Logout
       </button>
     </div>
