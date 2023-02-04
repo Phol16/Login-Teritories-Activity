@@ -22,7 +22,7 @@ const DisplayTeritories = () => {
           <p>Here are the list of territories</p>
         </section>
         <ul className='py-2 pb-15'>
-          <li>{Data.map(mainTeritory)}</li>
+          {Data.length ? <li>{Data.map(mainTeritory)}</li> : <p>Loading...</p> }
         </ul>
       </div>
       <Logout /> {/*component to logout*/}
