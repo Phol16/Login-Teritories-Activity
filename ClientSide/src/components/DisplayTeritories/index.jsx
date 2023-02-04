@@ -1,3 +1,5 @@
+import { faCity } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import { TerritoriesContext } from '../../pages/HomePage';
 import Logout from '../Logout';
@@ -15,8 +17,10 @@ const DisplayTeritories = () => {
   return (
     <>
       <div className='flex flex-col gap-2 z-10'>
-        <section>
-          <h2>Territories</h2>
+        <section >
+          <h2 className='text-xl'>
+            <FontAwesomeIcon icon={faCity}/>
+            Territories</h2>
           <p>Here are the list of territories</p>
         </section>
         <ul className='py-2 pb-15'>
