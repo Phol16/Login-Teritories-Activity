@@ -1,6 +1,6 @@
+import React, { useContext } from 'react';
 import { faCity } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext } from 'react';
 import { TerritoriesContext } from '../../pages/HomePage';
 import Logout from '../Logout';
 import MainTerritory from '../MainTerritory';
@@ -9,9 +9,7 @@ const DisplayTeritories = () => {
   const Data = useContext(TerritoriesContext); //gets the value from useContext hook
 
   const mainTeritory = (e) => {
-    if (e.parent === null) {
-      return <MainTerritory name={e.name} key={e.id} />;
-    }
+      return e.parent === null ? <MainTerritory name={e.name} key={e.id} /> : null;
   };
 
   return (

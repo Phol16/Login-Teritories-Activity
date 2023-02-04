@@ -1,6 +1,6 @@
+import React, { useContext, useState } from 'react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext, useState } from 'react';
 import { TerritoriesContext } from '../../pages/HomePage';
 import SubMainTerritory from '../SubMainTerritory';
 
@@ -20,6 +20,7 @@ const MainTerritory = ({ name }) => {
       return <SubMainTerritory name={e.name} key={e.id} />;
     }
   };
+
   return (
     <div className='flex flex-col gap-2 mb-2'>
       <section className='flex jsutify-center items-center gap-2 '>
