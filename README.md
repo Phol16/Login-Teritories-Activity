@@ -18,8 +18,8 @@ Style: tailwindCSS
 
 Steps:
 
-1. Run ServerSide
-2. Run ClientSide
+1. Run ServerSide(npm install > npm start)
+2. Run ClientSide(npm install > npm run build > npm run preview || npm install > npm run dev)
 
 LogIn Page
 ![loginPage](https://user-images.githubusercontent.com/110084699/216737112-cca30419-85dd-4201-b050-1159c8364993.png)
