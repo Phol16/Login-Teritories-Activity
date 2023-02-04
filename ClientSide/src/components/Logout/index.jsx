@@ -10,8 +10,8 @@ const Logout = () => {
   };
 
   return (
-    <div className='flex justify-end fixed bottom-3 w-3/4 md:w-1/4'>
-      <button className='text-black p-1 shadow' onClick={logout}>
+    <div className='flex justify-end fixed bottom-3 ml-56 md:ml-80 z-20'>
+      <button className='text-black p-1 shadow ' onClick={logout}>
         Logout
       </button>
     </div>

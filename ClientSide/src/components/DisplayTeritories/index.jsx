@@ -14,7 +14,7 @@ const DisplayTeritories = () => {
 
   return (
     <>
-      <div className='flex flex-col gap-2'>
+      <div className='flex flex-col gap-2 z-10'>
         <section>
           <h2>Territories</h2>
           <p>Here are the list of territories</p>
