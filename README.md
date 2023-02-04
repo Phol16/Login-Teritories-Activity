@@ -1,6 +1,6 @@
 # Login-Teritories-Activity
 
-Added ServerSide for User Credentials checking 
+Added ServerSide for User Credentials checking and fetching territories data from external api
 
 Features:
 
