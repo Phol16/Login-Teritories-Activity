@@ -22,16 +22,20 @@ Steps:
 2. Run ClientSide(npm install > npm run build > npm run preview || npm install > npm run dev)
 
 LogIn Page
-![loginPage](https://user-images.githubusercontent.com/110084699/216737112-cca30419-85dd-4201-b050-1159c8364993.png)
+![LoginPage](https://user-images.githubusercontent.com/110084699/216762673-c81132d9-7b3f-4fec-98e5-118ff439c9f6.png)
+
 
 
 LogIn Page Error
-![loginPage Error](https://user-images.githubusercontent.com/110084699/216737132-514166be-17b5-4292-99e8-709292729598.png)
+![LoginPageError](https://user-images.githubusercontent.com/110084699/216762702-2ffcdab9-2d2b-4e63-ac66-0e5e640978d3.png)
+
 
 
 Home Page
-![HomePage](https://user-images.githubusercontent.com/110084699/216737155-beaf246f-c4e9-4449-855d-3c3db9e62cd5.png)
+![HomePage](https://user-images.githubusercontent.com/110084699/216762708-233d85fc-6e2c-4118-8a3d-e673b00d6c47.png)
+
 
 
 PagenotFound
-![pageNotFound](https://user-images.githubusercontent.com/110084699/216737156-eeebeeb5-c46d-4ec7-bf92-71cd0ae9fc3d.png)
+![PagenotFound](https://user-images.githubusercontent.com/110084699/216762714-ced8e854-0a4a-47a2-8637-d255784298b8.png)
+
