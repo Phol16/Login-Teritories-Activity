@@ -19,7 +19,7 @@ const DisplayTeritories = () => {
           <h2>Territories</h2>
           <p>Here are the list of territories</p>
         </section>
-        <ul>
+        <ul className='py-2 pb-15'>
           <li>{Data.map(mainTeritory)}</li>
         </ul>
       </div>
