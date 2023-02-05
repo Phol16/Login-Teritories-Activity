@@ -32,7 +32,8 @@ LogIn Page Error
 
 
 Home Page
-![HomePage](https://user-images.githubusercontent.com/110084699/216762708-233d85fc-6e2c-4118-8a3d-e673b00d6c47.png)
+![homePage](https://user-images.githubusercontent.com/110084699/216800897-2e5e5720-cd3c-4cf8-a5f9-80a66f012d2a.png)
+
 
 
 
