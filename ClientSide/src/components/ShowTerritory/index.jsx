@@ -2,23 +2,14 @@ import React, { useContext, useState } from 'react';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TerritoriesContext } from '../../pages/HomePage';
-import SubMainTerritory from '../SubMainTerritory';
 
-const MainTerritory = ({ name }) => {
+const ShowTerritory = ({name, id} ) => {
   const Data = useContext(TerritoriesContext); //gets the value from useContext hook
   const [open, setOpen] = useState(false); //state for dropdown
 
-  const subMainTerritory = (e) => {
-    //conditional statement if the current territory name and the child parentId is true it will display the children
-    if (e.parent === '1' && name === 'Metro Manila') {
-      return <SubMainTerritory name={e.name} key={e.id} />;
-    }
-    if (e.parent === '2' && name === 'CALABARZON') {
-      return <SubMainTerritory name={e.name} key={e.id} />;
-    }
-    if (e.parent === '3' && name === 'Central Luzon') {
-      return <SubMainTerritory name={e.name} key={e.id} />;
-    }
+  const subTerritory = (e) => {
+    //conditional statement if the mapped territory parent id is equal to the id of the current component 
+      return e.parent === id ? <ShowTerritory {...e} key={e.id}/> : null;
   };
 
   return (
@@ -42,10 +33,10 @@ const MainTerritory = ({ name }) => {
         </p>
       </section>
       <div className='bg-slate-600 rounded-lg ml-5' style={{ display: open ? 'block' : 'none' }}>
-        {Data.map(subMainTerritory)}
+        {Data.map(subTerritory)}
       </div>
     </div>
   );
 };
 
-export default MainTerritory;
+export default ShowTerritory;

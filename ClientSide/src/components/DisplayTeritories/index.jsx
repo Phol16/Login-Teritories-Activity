@@ -3,13 +3,13 @@ import { faCity } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TerritoriesContext } from '../../pages/HomePage';
 import Logout from '../Logout';
-import MainTerritory from '../MainTerritory';
+import ShowTerritory from '../ShowTerritory';
 
 const DisplayTeritories = () => {
   const Data = useContext(TerritoriesContext); //gets the value from useContext hook
 
   const mainTeritory = (e) => {
-      return e.parent === null ? <MainTerritory name={e.name} key={e.id} /> : null;
+      return e.parent === null ? <ShowTerritory {...e} key={e.id}/> : null;
   };
 
   return (
